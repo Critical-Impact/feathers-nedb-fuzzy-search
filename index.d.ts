@@ -3,10 +3,10 @@
 
 export = search;
 
-declare function search(options: FeathersNedbFuzzySearch.CheckPermissionsOptions): any;
+declare function search(options: FeathersNedbFuzzySearch.SearchOptions): any;
 
 declare namespace FeathersNedbFuzzySearch {
-  export interface CheckPermissionsOptions
+  export interface SearchOptions
   {
     //Specify which fields to search.
     fields?: string[];

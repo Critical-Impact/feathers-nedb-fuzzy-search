@@ -3,7 +3,7 @@
 
 export = search;
 
-declare function search(options: FeathersNedbFuzzySearch.SearchOptions): any;
+declare function search(options: FeathersNedbFuzzySearch.SearchOptions | string[]): any;
 
 declare namespace FeathersNedbFuzzySearch {
   export interface SearchOptions
@@ -13,8 +13,8 @@ declare namespace FeathersNedbFuzzySearch {
     //If true and fields is undefined, will search deep in objects. nedb search mode only
     deep?: boolean;
     //If true, diacritics will be ignored. 5x slower. nedb search mode only
-    fuzzyDiacritics: boolean;
+    fuzzyDiacritics?: boolean;
     //Specify which fields to exclude from search. nedb regex mode only
-    excludeFields: string[];
+    excludeFields?: string[];
   }
 }
